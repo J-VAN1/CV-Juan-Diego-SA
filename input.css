@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@keyframes fade-out-up {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10%) scale(0.95);
+    }
+}
+
+#profile {
+    animation: fade-out-up linear both;
+    animation-timeline: scroll();
+    animation-range: 0vh 60vh;
+    will-change: opacity, transform;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
