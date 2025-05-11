@@ -348,6 +348,9 @@
   .text-center {
     text-align: center;
   }
+  .text-justify {
+    text-align: justify;
+  }
   .indent-8 {
     text-indent: calc(var(--spacing) * 8);
   }
@@ -462,24 +465,24 @@
 }
 @keyframes fade-in-up {
   from {
-    opacity: 0.9;
-    transform: translateY(10%) scale(1);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
-#profile {
+header {
   animation: fade-out-up linear both;
   animation-timeline: scroll();
   animation-range: 0vh 60vh;
   will-change: opacity, transform;
 }
-div {
+main {
   animation: fade-in-up linear both;
   animation-timeline: scroll();
-  animation-range: 0vh 15vh;
+  animation-range: -0vh 10vh;
   will-change: opacity, transform;
 }
 @property --tw-rotate-x {
